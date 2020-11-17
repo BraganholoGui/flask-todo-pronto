@@ -9,7 +9,7 @@ def index():
 
 @web.route('/create', methods=['POST'])
 def create():
-  return TodoController.create()
+  return TodoController.create(index)
 
 @web.route('/delete/<int:index>')
 def delete(index):

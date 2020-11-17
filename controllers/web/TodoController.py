@@ -4,14 +4,11 @@ from models.Todo import todos
 class TodoController():
   def index():
     return render_template(
-      'index.html', todos=todos
-    )
+      'index.html', todos=todos)
 
   def create():
     title = request.form.get('title')
-    todos.append({
-      'title': title, 'complete': False
-    })
+    todos.append({'title': title, 'complete': False})
     return redirect('/')
 
   def delete(index):
