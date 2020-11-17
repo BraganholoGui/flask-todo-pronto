@@ -7,7 +7,7 @@ class TodoController():
 
 	def create():
 		title = request.form.get('title')
-		todos.append({'title': title, 'complete': False})
+		todos.append({ 'title': title, 'complete': False})
 		return redirect('/')
 
 	def delete(index):
